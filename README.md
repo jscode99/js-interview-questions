@@ -6,7 +6,7 @@ Welcome to the JavaScript interview questions repository! This collection is des
 
 ### 1. index.html
 
-This HTML file serves as the main entry point for exploring JavaScript interview questions. It includes references to two JavaScript files, `variableQuestions.js` and `arrayMethodsQuestions.js`.
+This HTML file serves as the main entry point for exploring JavaScript interview questions. It includes references to two JavaScript files, `variableQuestions.js`, `arrayMethodsQuestions.js` and `functionQuestions.js`.
 
 ### 2. variableQuestions.js
 
@@ -15,6 +15,10 @@ This JavaScript file focuses on variable declarations, scoping, hoisting, and va
 ### 3. arrayMethodsQuestions.js
 
 In this JavaScript file, you'll find discussions on essential array methods like `map()`, `filter()`, and `reduce()`. Additionally, it includes polyfills for these methods, demonstrating a deeper understanding of their functionality. The comments offer insights into how these methods work and provide a polyfill implementation for each.
+
+### 4. functionQuestions.js
+
+In this Javascript file, you'll find deep discussion on JS functions and some of the o/p questions.
 
 ## Instructions:
 
