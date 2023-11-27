@@ -25,9 +25,9 @@ const fundtionExpression = function (str) {
  */
 
 // ================= What is Anonymous function? =================
-
+let anonymousVariable = 2;
 document.addEventListener("click", function () {
-  return num + num;
+  return anonymousVariable + 2;
 }); // Here this callback function is an anonymous function.
 
 /**
@@ -123,8 +123,9 @@ function functionHoisting() {
  * 1) Function is fully hoisted (Complete function is copied), so even before the declaration we can call it.
  */
 
-// ================= Function hoisting - O/P based question? =============
+// ================= Function hoisting - O/P based question =============
 
+// 1)
 var globalScopedVariable = 2;
 
 function opFunctionHoisting() {
@@ -140,16 +141,35 @@ opFunctionHoisting();
  * 2) In the local/block scope, we have a variable and it is hoisted as well, so the declared value is undefined before the execution.
  */
 
-// ================= Spread and Rest operator =============
-
-function multiplyInput(num1, ...nums) {
-  // Rest operator
-  return num1 * nums;
+// 2)
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
 }
 
-var arrayForMultiplication = [2, 4];
+// Output : 0 1 2 3 4
 
-console.log(multiplyInput(...arrayForMultiplication)); // Rest operator
+/**
+ * 1) Everytime the for-loop runs it "create a block scope" for i because of "let".
+ *
+ * 2) If it was a "var" instead of "let", then it should print 5, 5, 5, 5, 5 because "var" doesn't have a block scope.
+ */
+
+// ================= Spread and Rest operator =============
+
+function multiplyInput(num1, num2, ...nums) {
+  console.log("Rest operator ====>", nums);
+  // Rest operator
+  return num1 * num2 * nums[2];
+}
+
+var arrayForMultiplication = [2, 4, 6, 8, 10];
+
+console.log(
+  "Spread operator =======>",
+  multiplyInput(...arrayForMultiplication),
+); // Spread operator
 
 /**
  * 1) Rest parameter must be last formal parameter.
@@ -158,36 +178,37 @@ console.log(multiplyInput(...arrayForMultiplication)); // Rest operator
 // ================= What is callback functions? =============
 
 function tryCallBack(value) {
-  return `User has given this ${value}`;
+  return `User has given this ${value.toLowerCase()}`;
 }
 
 function myCallBack(cb) {
   if (true) {
-    cb("Hello");
+    return cb("Hello");
   }
 }
 
-myCallBack(tryCallBack);
+console.log(myCallBack(tryCallBack));
 /**
  * 1) Function that passed into another function as an argument, which is then invoked inside that function to complete some kind of actions.
  */
 
 // Pre-defined callback functions in JS
 
-document.addEventListener("click", () => {
-  console.log("This is a predefined callback function in JS");
-});
+const btnHanlder = () =>
+  document.addEventListener("click", () => {
+    console.log("This is a predefined callback function in JS");
+  });
 
 // ================= What is arrow function? ===============
 
 const myArrowFunction = () => {
-  return 'This is an arrow function!!'
-}
+  return "This is an arrow function!!";
+};
 
-const mySecondArrow = () => `This is my second arrow function`
+const mySecondArrow = () => `This is my second arrow function`;
 
 /**
  * 1) Introduced in ES6 version of JS and kind of similar to normal function.
- * 
+ *
  * 2) Implicit "return" keyword
  */
