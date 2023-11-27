@@ -129,7 +129,7 @@ let hoistedLet = 20;
  * 
  * 2) TEMPORAL DEAD ZONE : Time b/w the declaration and initialization of the "let" and "const" variables.
  * 
- * 3) State where the variables are in the scope but they are not declared yet.
+ * 3) State where the variables are "in the scope" but "they are not declared yet".
  */
 
 // ================================= Hoisting ======================================================
