@@ -1,4 +1,4 @@
-// Functions: One of the fundamental building blocks in JavaScript
+ // Functions: One of the fundamental building blocks in JavaScript
 
 // ================= What is Function declarations / definition / statement? =================
 function functionDeclaration(num) {
